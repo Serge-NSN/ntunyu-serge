@@ -25,7 +25,7 @@ const videos = [
   {
     title: "GreenSpark PodCast",
     youtubeUrl: "https://youtu.be/Ntk4KvKMm9U?si=UcxHjE3Mr7fE8-GB",
-    tags: ["PodCast", "YouTube"]
+    tags: ["Podcast", "YouTube"]
   },
   {
     title: "Introducing FoundIt",

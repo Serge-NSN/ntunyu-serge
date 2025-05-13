@@ -52,7 +52,7 @@ const Experience = () => {
   return (
     <section id="experience" className="py-20 bg-primary-light/30">
       <div className="container mx-auto px-4">
-        <h2 className="section-title">Experience</h2>
+        <h2 className="section-title">Experience</h2><br></br>
         <div className="space-y-8">
           {experiences.map((exp, index) => (
             <div key={index} className="card hover:transform hover:scale-[1.02] transition-all">
