@@ -115,7 +115,7 @@ export const videos = [
     catLabel: "Wedding Highlight",
     catClass: "cat-faceless",
     title: "Wedding Highlight",
-    desc: Captured and edited beautiful moments of this couple.",
+    desc: "Captured and edited beautiful moments of this couple.",
     youtubeId: "sxC4YrO0MnA",
     aspect: "portrait",
   },
