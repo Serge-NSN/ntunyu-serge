@@ -206,7 +206,7 @@ export const videos = [
     category: "videography",
     catLabel: "Videography",
     catClass: "cat-videography",
-    title: "Wedding Highlight — [Wedding]",
+    title: "Wedding Highlight",
     desc: "Wedding Videography — capturing real moments, real emotions, and real stories as they unfold. All captured by myself, and with smartphone.",
     youtubeId: "CswATJ605CM",
     aspect: "portrait",
