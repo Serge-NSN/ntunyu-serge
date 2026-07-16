@@ -36,7 +36,7 @@ export const videos = [
     title: "Brand Promo — [Client Name]",
     desc: "High-energy promo video crafted to captivate audiences and drive brand awareness.",
     youtubeId: "VIDEO_ID_1",
-    aspect: "landscape",
+    aspect: "portrait",
   },
   {
     id: 2,
