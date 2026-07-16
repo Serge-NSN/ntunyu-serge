@@ -210,6 +210,16 @@ export const videos = [
     youtubeId: "kraLc4zqH1Y",
     aspect: "portrait",
   },
+{
+    id: 20,
+    category: "videography",
+    catLabel: "Videography",
+    catClass: "cat-videography",
+    title: "Wedding Highlight — [Wedding]",
+    desc: "Wedding Videography — capturing real moments, real emotions, and real stories as they unfold. All captured by myself, and with smartphone.",
+    youtubeId: "CswATJ605CM",
+    aspect: "portrait",
+  },
 ];
 
 export const filterCategories = [
