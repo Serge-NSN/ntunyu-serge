@@ -241,13 +241,13 @@ export const engSkills = [
     tags: ["HTML/CSS", "JavaScript", "Responsive Design"],
   },
   {
-    icon: "📊",
+    icon: "📄",
     title: "Microsoft Office Specialist",
     desc: "Certified in Microsoft Excel 365 and Microsoft Word — National Champion 4× and World Finalist.",
     tags: ["Excel 365", "Microsoft Word", "Data Management"],
   },
   {
-    icon: "🎓",
+    icon: "👨🏽‍💻",
     title: "IT Tutoring & Consulting",
     desc: "Mentoring students and interns in Front-end Development, Digital Literacy, and certification exam prep.",
     tags: ["Front-end Dev", "IC3 Literacy", "Mentoring"],
