@@ -159,16 +159,7 @@ export const videos = [
     youtubeId: "x4G2AYfpQ1A",
     aspect: "portrait",
   },
-  {
-    id: 15,
-    category: "other",
-    catLabel: "Creative Edit",
-    catClass: "cat-other",
-    title: "Creative Showcase — [Title]",
-    desc: "A creative video edit showcasing diverse styles, transitions and visual techniques.",
-    youtubeId: "VIDEO_ID_15",
-    aspect: "landscape",
-  },
+ 
   {
     id: 16,
     category: "other",
