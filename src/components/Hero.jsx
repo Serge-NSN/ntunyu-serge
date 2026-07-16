@@ -51,7 +51,7 @@ const Hero = () => {
         </motion.div>
 
         <motion.p className="hero-sub" variants={fadeUp}>
-          I tell stories through a lens and through code — crafting promo videos,
+          I tell stories through creative editing and code crafting promo videos,
           wedding highlights, recap reels, BTS films, faceless YouTube content,
           AI videos, and full event videography, while also building software as
           a Computer Engineer.

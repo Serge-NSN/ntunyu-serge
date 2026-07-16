@@ -776,6 +776,7 @@ ul {
   grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
   gap: 32px;
   margin-bottom: 64px;
+  align-items: start;
 }
 
 .video-card {

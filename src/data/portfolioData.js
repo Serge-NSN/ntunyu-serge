@@ -293,6 +293,18 @@ export const experience = [
     tags: ["Video Editing", "Creative Direction", "Social Media"],
   },
   {
+    id: 7,
+    date: "January 2025 – August 2025",
+    role: "Lead IT Specialist",
+    company: "H4BF — Bamenda, Cameroon",
+    bullets: [
+      "Built and maintained WordPress websites for the organisation.",
+      "Trained youths in Programming and practical IT skills.",
+      "Provided IT Support to staff.",
+    ],
+    tags: ["WordPress", "IT Support", "Training", "Youth Development"],
+  },
+  {
     id: 2,
     date: "July 2024 – 2025",
     role: "Software Engineer",
@@ -302,6 +314,18 @@ export const experience = [
       "Tutored interns in Front-end Development.",
     ],
     tags: ["Software Engineering", "Video Editing", "Tutoring"],
+  },
+  {
+    id: 6,
+    date: "July 2023 – Present",
+    role: "Software Tester",
+    company: "Tester Work — Remote",
+    bullets: [
+      "Test Case Development and Execution.",
+      "Perform Usability, Exploratory and Functional tests following test case documents.",
+      "Collaborated effectively with cross-functional teams to ensure timely delivery of high-quality software.",
+    ],
+    tags: ["QA Testing", "Test Cases", "Usability Testing", "Remote"],
   },
   {
     id: 3,
@@ -337,30 +361,6 @@ export const experience = [
       "Tutored students preparing for the IC3 Digital Literacy Exam.",
     ],
     tags: ["IT Consulting", "IC3 Literacy", "Tutoring"],
-  },
-  {
-    id: 6,
-    date: "July 2023 – Present",
-    role: "Software Tester",
-    company: "Tester Work — Remote",
-    bullets: [
-      "Test Case Development and Execution.",
-      "Perform Usability, Exploratory and Functional tests following test case documents.",
-      "Collaborated effectively with cross-functional teams to ensure timely delivery of high-quality software.",
-    ],
-    tags: ["QA Testing", "Test Cases", "Usability Testing", "Remote"],
-  },
-  {
-    id: 7,
-    date: "January 2025 – August 2025",
-    role: "Lead IT Specialist",
-    company: "H4BF — Bamenda, Cameroon",
-    bullets: [
-      "Built and maintained WordPress websites for the organisation.",
-      "Trained youths in Programming and practical IT skills.",
-      "Provided IT Support to staff.",
-    ],
-    tags: ["WordPress", "IT Support", "Training", "Youth Development"],
   },
 ];
 
