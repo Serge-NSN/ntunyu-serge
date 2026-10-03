@@ -29,6 +29,16 @@ export const stats = [
 // ============================================
 export const videos = [
   {
+    id: 1791059515808,
+    title: "ENLISTED - A Christian Short Movie",
+    desc: "A cinematic realistic movie created entirely with AI featuring me as the main character.",
+    youtubeId: "6aWYHkLQrcc",
+    category: "ai",
+    catLabel: "AI Videos",
+    catClass: "cat-ai",
+    aspect: "landscape",
+  },
+  {
     id: 1,
     category: "promo",
     catLabel: "Promo Video",
