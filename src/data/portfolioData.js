@@ -29,6 +29,16 @@ export const stats = [
 // ============================================
 export const videos = [
   {
+    id: 1791060191214,
+    title: "E-commerce Meta Ad",
+    desc: "A professional motion graphics ad for a Digital Marketing Agency. This Ad was used on Meta Ads",
+    youtubeId: "awFiARtjkeM",
+    category: "motion",
+    catLabel: "Motion Graphics",
+    catClass: "cat-motion",
+    aspect: "landscape",
+  },
+  {
     id: 1791059515808,
     title: "ENLISTED - A Christian Short Movie",
     desc: "A cinematic realistic movie created entirely with AI featuring me as the main character.",
