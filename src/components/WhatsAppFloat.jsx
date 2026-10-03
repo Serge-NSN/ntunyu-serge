@@ -1,4 +1,3 @@
-import { motion } from 'framer-motion';
 import { WHATSAPP_URL } from '../data/portfolioData';
 
 const WaIcon = () => (
@@ -9,7 +8,7 @@ const WaIcon = () => (
 
 const WhatsAppFloat = () => {
   return (
-    <motion.a
+    <a
       href={WHATSAPP_URL}
       target="_blank"
       rel="noreferrer"
@@ -17,15 +16,10 @@ const WhatsAppFloat = () => {
       aria-label="Chat on WhatsApp"
       title="Chat on WhatsApp"
       className="wa-float"
-      initial={{ scale: 0, opacity: 0 }}
-      animate={{ scale: 1, opacity: 1 }}
-      transition={{ duration: 0.5, delay: 2, type: 'spring', stiffness: 200 }}
-      whileHover={{ scale: 1.12 }}
-      whileTap={{ scale: 0.95 }}
     >
       <WaIcon />
       <span className="wa-pulse" />
-    </motion.a>
+    </a>
   );
 };
 

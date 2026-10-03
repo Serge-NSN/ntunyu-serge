@@ -1,50 +1,21 @@
-import { useInView } from 'react-intersection-observer';
-import { motion } from 'framer-motion';
 import { experience } from '../data/portfolioData';
 
-const fadeUp = (delay = 0) => ({
-  hidden: { opacity: 0, y: 30 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1], delay },
-  },
-});
-
 const Experience = () => {
-  const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.05 });
-
   return (
-    <section className="section experience-section" id="experience" ref={ref}>
+    <section className="section experience-section" id="experience">
       <div className="container">
-        <motion.div
-          className="section-label"
-          variants={fadeUp(0)}
-          initial="hidden"
-          animate={inView ? 'visible' : 'hidden'}
-        >
+        <div className="section-label">
           Work History
-        </motion.div>
+        </div>
 
-        <motion.h2
-          className="section-title"
-          variants={fadeUp(0.1)}
-          initial="hidden"
-          animate={inView ? 'visible' : 'hidden'}
-        >
+        <h2 className="section-title">
           Professional<br />
           <span className="gradient-text">Experience</span>
-        </motion.h2>
+        </h2>
 
         <div className="timeline">
-          {experience.map((job, i) => (
-            <motion.div
-              key={job.id}
-              className="timeline-item"
-              variants={fadeUp(0.1 + i * 0.12)}
-              initial="hidden"
-              animate={inView ? 'visible' : 'hidden'}
-            >
+          {experience.map((job) => (
+            <div key={job.id} className="timeline-item">
               <div className="tl-dot" />
               <div className="tl-date">{job.date}</div>
               <div className="tl-card">
@@ -61,7 +32,7 @@ const Experience = () => {
                   ))}
                 </div>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>

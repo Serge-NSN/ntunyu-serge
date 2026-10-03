@@ -1,49 +1,21 @@
-import { useInView } from 'react-intersection-observer';
-import { motion } from 'framer-motion';
 import weddingPhoto from '../assets/photo_wedding.jpg';
 
-const fadeUp = (delay = 0) => ({
-  hidden: { opacity: 0, y: 40 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.75, ease: [0.22, 1, 0.36, 1], delay },
-  },
-});
-
 const VideographySpotlight = () => {
-  const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.08 });
-
   return (
-    <section className="section videography-section" id="videography" ref={ref}>
+    <section className="section videography-section" id="videography">
       <div className="container">
-        <motion.div
-          className="section-label"
-          variants={fadeUp(0)}
-          initial="hidden"
-          animate={inView ? 'visible' : 'hidden'}
-        >
+        <div className="section-label">
           Behind the Lens
-        </motion.div>
+        </div>
 
-        <motion.h2
-          className="section-title"
-          variants={fadeUp(0.1)}
-          initial="hidden"
-          animate={inView ? 'visible' : 'hidden'}
-        >
+        <h2 className="section-title">
           Videography<br />
           <span className="gradient-text">Shot & Edited</span>
-        </motion.h2>
+        </h2>
 
         <div className="videography-grid">
           {/* Left — Text */}
-          <motion.div
-            className="videography-text"
-            variants={fadeUp(0.15)}
-            initial="hidden"
-            animate={inView ? 'visible' : 'hidden'}
-          >
+          <div className="videography-text">
             <p>
               Beyond editing, I step behind the lens as a <strong>videographer</strong> — 
               shooting and editing full productions with nothing but a smartphone and a cinematic eye.
@@ -78,7 +50,7 @@ const VideographySpotlight = () => {
               </div>
             </div>
 
-            <motion.a
+            <a
               href="#portfolio"
               className="btn-primary"
               onClick={(e) => {
@@ -86,20 +58,13 @@ const VideographySpotlight = () => {
                 // Filter to videography on click
                 document.querySelector('#portfolio')?.scrollIntoView({ behavior: 'smooth' });
               }}
-              whileHover={{ scale: 1.03 }}
-              whileTap={{ scale: 0.97 }}
             >
               📷 View Videography Work
-            </motion.a>
-          </motion.div>
+            </a>
+          </div>
 
           {/* Right — Photo */}
-          <motion.div
-            className="videography-photo-wrap"
-            initial={{ opacity: 0, x: 50, scale: 0.97 }}
-            animate={inView ? { opacity: 1, x: 0, scale: 1 } : {}}
-            transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
-          >
+          <div className="videography-photo-wrap">
             <div className="videography-photo-frame">
               <img
                 src={weddingPhoto}
@@ -113,19 +78,15 @@ const VideographySpotlight = () => {
               </div>
             </div>
 
-            {/* Decorative floating elements */}
-            <motion.div
-              className="vp-float-card"
-              animate={{ y: [0, -10, 0] }}
-              transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
-            >
+            {/* Decorative element */}
+            <div className="vp-float-card">
               <span>🎬</span>
               <div>
                 <div className="card-label">In action</div>
                 <div className="card-value">Getting the clips myself</div>
               </div>
-            </motion.div>
-          </motion.div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

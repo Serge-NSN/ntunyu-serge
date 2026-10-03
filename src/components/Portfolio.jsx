@@ -1,20 +1,9 @@
 import { useState } from 'react';
-import { useInView } from 'react-intersection-observer';
-import { motion, AnimatePresence } from 'framer-motion';
 import { videos, filterCategories, WHATSAPP_URL } from '../data/portfolioData';
 
-const VideoCard = ({ video, index }) => {
-  const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.05 });
-
+const VideoCard = ({ video }) => {
   return (
-    <motion.div
-      ref={ref}
-      className="video-card"
-      initial={{ opacity: 0, y: 40 }}
-      animate={inView ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1], delay: (index % 3) * 0.1 }}
-      layout
-    >
+    <div className="video-card">
       <div className={`video-thumb-wrap ${video.aspect}`}>
         <iframe
           src={`https://www.youtube.com/embed/${video.youtubeId}`}
@@ -29,58 +18,37 @@ const VideoCard = ({ video, index }) => {
         <h3 className="video-title">{video.title}</h3>
         <p className="video-desc">{video.desc}</p>
       </div>
-    </motion.div>
+    </div>
   );
 };
 
 const Portfolio = () => {
   const [activeFilter, setActiveFilter] = useState('all');
-  const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.05 });
 
   const filtered = activeFilter === 'all'
-    ? videos
-    : videos.filter(v => v.category === activeFilter);
+    ? [...videos].sort((a, b) => b.id - a.id)
+    : videos.filter(v => v.category === activeFilter).sort((a, b) => b.id - a.id);
 
   return (
-    <section className="section portfolio-section" id="portfolio" ref={ref}>
+    <section className="section portfolio-section" id="portfolio">
       <div className="container">
-        <motion.div
-          className="section-label"
-          initial={{ opacity: 0, y: 20 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
-        >
+        <div className="section-label">
           My Work
-        </motion.div>
+        </div>
 
-        <motion.h2
-          className="section-title"
-          initial={{ opacity: 0, y: 30 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.7, delay: 0.1 }}
-        >
+        <h2 className="section-title">
           Video<br />
           <span className="gradient-text">Portfolio</span>
-        </motion.h2>
+        </h2>
 
-        <motion.p
-          className="section-sub"
-          initial={{ opacity: 0, y: 20 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, delay: 0.15 }}
-        >
+        <p className="section-sub">
           Promo videos, recap reels, wedding highlights, BTS films, faceless YouTube content,
           AI visuals, event videography and more — every frame crafted with purpose and every
           edit told as a story.
-        </motion.p>
+        </p>
 
         {/* Filter Tabs */}
-        <motion.div
-          className="filter-tabs"
-          initial={{ opacity: 0, y: 20 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, delay: 0.2 }}
-        >
+        <div className="filter-tabs">
           {filterCategories.map((cat) => (
             <button
               key={cat.key}
@@ -91,16 +59,14 @@ const Portfolio = () => {
               {cat.label}
             </button>
           ))}
-        </motion.div>
+        </div>
 
         {/* Video Grid */}
-        <motion.div className="video-grid" layout>
-          <AnimatePresence mode="popLayout">
-            {filtered.map((video, i) => (
-              <VideoCard key={video.id} video={video} index={i} />
-            ))}
-          </AnimatePresence>
-        </motion.div>
+        <div className="video-grid">
+          {filtered.map((video) => (
+            <VideoCard key={video.id} video={video} />
+          ))}
+        </div>
 
         {/* CTA */}
         <div className="portfolio-cta">

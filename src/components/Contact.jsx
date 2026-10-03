@@ -1,5 +1,3 @@
-import { useInView } from 'react-intersection-observer';
-import { motion } from 'framer-motion';
 import { personalInfo, WHATSAPP_URL } from '../data/portfolioData';
 import photo1 from '../assets/photo1.jpg';
 
@@ -73,48 +71,26 @@ const contactLinks = [
 ];
 
 const Contact = () => {
-  const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.08 });
-
   return (
-    <section className="section contact-section" id="contact" ref={ref}>
+    <section className="section contact-section" id="contact">
       <div className="container">
-        <motion.div
-          className="section-label"
-          initial={{ opacity: 0, y: 20 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
-        >
+        <div className="section-label">
           Let's Connect
-        </motion.div>
+        </div>
 
-        <motion.h2
-          className="section-title"
-          initial={{ opacity: 0, y: 30 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.7, delay: 0.1 }}
-        >
+        <h2 className="section-title">
           Work With<br />
           <span className="gradient-text">Me</span>
-        </motion.h2>
+        </h2>
 
-        <motion.p
-          className="section-sub"
-          initial={{ opacity: 0, y: 20 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, delay: 0.15 }}
-        >
+        <p className="section-sub">
           Whether you need a stunning promo video, a highlight reel, wedding coverage,
           or a software solution — I'm ready to bring your vision to life.
-        </motion.p>
+        </p>
 
         <div className="contact-grid">
           {/* Links */}
-          <motion.div
-            className="contact-links"
-            initial={{ opacity: 0, x: -40 }}
-            animate={inView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.8, delay: 0.2 }}
-          >
+          <div className="contact-links">
             {contactLinks.map((link) => (
               <a
                 key={link.id}
@@ -136,15 +112,10 @@ const Contact = () => {
                 </div>
               </a>
             ))}
-          </motion.div>
+          </div>
 
           {/* Photo */}
-          <motion.div
-            className="contact-photo"
-            initial={{ opacity: 0, x: 40 }}
-            animate={inView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.8, delay: 0.25 }}
-          >
+          <div className="contact-photo">
             <img
               src={photo1}
               alt="Ntunyu Serge Ngala — get in touch"
@@ -152,7 +123,7 @@ const Contact = () => {
             <div className="contact-photo-tag">
               Based in Cameroon 🇨🇲 · Available Worldwide
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>

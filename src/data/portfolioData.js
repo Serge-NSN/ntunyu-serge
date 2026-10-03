@@ -90,11 +90,11 @@ export const videos = [
   },
   {
     id: 7,
-    category: "promo",
-    catLabel: "MOTION GRAPHICS",
-    catClass: "cat-bts",
+    category: "motion",
+    catLabel: "Motion Graphics",
+    catClass: "cat-motion",
     title: "AD — [MALEGADO]",
-    desc: "An intimate behind-the-scenes look at the production process.",
+    desc: "An ad creative for a language learning app",
     youtubeId: "1JdpHlWeup0",
     aspect: "square",
   },
@@ -216,6 +216,7 @@ export const videos = [
 export const filterCategories = [
   { key: "all", label: "All" },
   { key: "promo", label: "Promo Videos" },
+  { key: "motion", label: "Motion Graphics" },
   { key: "recap", label: "Recap & Highlight" },
   { key: "bts", label: "BTS Videos" },
   { key: "faceless", label: "YouTube Faceless" },
